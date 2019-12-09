@@ -1,0 +1,12 @@
+.root {
+  &,
+  * {
+    &,
+    &::before,
+    &::after {
+      overflow-wrap: break-word;
+      box-sizing: border-box;
+      overflow: hidden;
+    }
+  }
+}

@@ -1,15 +1,26 @@
 module.exports = {
   root: true,
-  extends: ['eslint:recommended', 'plugin:promise/recommended', 'prettier'],
+  extends: [
+    'eslint:recommended',
+    'plugin:promise/recommended',
+    'plugin:react/recommended',
+    'prettier',
+    'prettier/react'
+  ],
   parser: 'babel-eslint',
   parserOptions: {
     ecmaVersion: 2019,
     sourceType: 'module'
   },
-  plugins: ['prettier', 'promise'],
+  plugins: ['prettier', 'promise', 'react'],
   env: {
     'es6': true,
     'browser': true
+  },
+  settings: {
+    'react': {
+      'version': 'detect'
+    }
   },
   rules: {
     'no-console': [

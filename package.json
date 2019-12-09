@@ -5,7 +5,12 @@
   "license": "UNLICENSED",
   "private": true,
   "dependencies": {
-    "parcel-bundler": "^1.12.4"
+    "autoprefixer": "^9.7.3",
+    "parcel-bundler": "^1.12.4",
+    "postcss-modules": "^1.4.1",
+    "postcss-nested": "^4.2.1",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0"
   },
   "devDependencies": {
     "babel-eslint": "^10.0.3",
@@ -13,6 +18,7 @@
     "eslint-config-prettier": "^6.7.0",
     "eslint-plugin-prettier": "^3.1.1",
     "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-react": "^7.17.0",
     "husky": "^3.1.0",
     "prettier": "^1.19.1",
     "pretty-quick": "^2.0.1"
@@ -21,6 +27,6 @@
     "build": "parcel build ./src/index.html --experimental-scope-hoisting --no-source-maps --public-url \"./\" --out-dir \"./build/production\"",
     "bump-version": "npm version --no-git-tag-version",
     "develop": "parcel ./src/index.html --out-dir \"./build/development\" --port 8000 --https --no-autoinstall",
-    "lint": "eslint \"./src/**/*.js\""
+    "lint": "eslint \"./**/*.js\""
   }
 }
