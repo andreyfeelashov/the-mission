@@ -3,6 +3,8 @@ import ReactDom from 'react-dom';
 
 import Root from '~/components/layout/root';
 
+import Renderer from '~/services/renderer';
+
 import {getEnvironment} from '~/helpers/misc';
 
 const environment = getEnvironment();
@@ -14,5 +16,11 @@ if (environment.browser) {
 }
 
 function start() {
-  ReactDom.render(<Root />, document.querySelector('.root-wrapper'));
+  const services = {};
+  services.renderer = new Renderer(services);
+
+  ReactDom.render(
+    <Root services={services} />,
+    document.querySelector('.root-wrapper')
+  );
 }
