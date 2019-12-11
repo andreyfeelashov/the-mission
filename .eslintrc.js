@@ -33,6 +33,7 @@ module.exports = {
     'prefer-const': 'error',
     'prettier/prettier': 'error',
     'promise/catch-or-return': 'off',
-    'quotes': ['error', 'single']
+    'quotes': ['error', 'single'],
+    'react/prop-types': 'off'
   }
 };
