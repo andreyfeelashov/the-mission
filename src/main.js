@@ -4,6 +4,7 @@ import ReactDom from 'react-dom';
 import Root from '~/components/layout/root';
 
 import Renderer from '~/services/renderer';
+import Themer from '~/services/themer';
 
 import {getEnvironment} from '~/helpers/misc';
 
@@ -18,9 +19,11 @@ if (environment.browser) {
 function start() {
   const services = {};
   services.renderer = new Renderer(services);
+  services.themer = new Themer(services);
 
-  ReactDom.render(
-    <Root services={services} />,
-    document.querySelector('.root-wrapper')
-  );
+  const rootWrapperElement = document.querySelector('.root-wrapper');
+
+  services.themer.initialize(rootWrapperElement);
+
+  ReactDom.render(<Root services={services} />, rootWrapperElement);
 }

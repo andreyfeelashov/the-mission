@@ -14,7 +14,7 @@ function Viewport() {
   React.useEffect(connectRenderer, []);
 
   return (
-    <div className={styles['root']}>
+    <div className={styles['viewport']}>
       <canvas
         className={styles['rendering-target']}
         ref={renderingTargetElementRef}

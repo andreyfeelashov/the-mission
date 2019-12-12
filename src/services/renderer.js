@@ -1,9 +1,13 @@
 import * as Pixi from 'pixi.js';
 
+import {Service} from '~/helpers/service';
+
 Pixi.utils.skipHello();
 
-export default class Renderer {
-  constructor() {
+export default class Renderer extends Service {
+  constructor(services) {
+    super(services);
+
     Object.assign(this, {
       controller: null
     });
@@ -13,6 +17,7 @@ export default class Renderer {
     this.controller = new Pixi.Application({
       view: renderingTargetElement,
       antialias: true,
+      transparent: true,
       autoStart: false
     });
   }
