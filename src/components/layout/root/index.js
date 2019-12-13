@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Viewport from '~/components/layout/viewport';
+import WidgetOutlet from '~/components/layout/widget-outlet';
 
 import {ServiceProvider} from '~/contexts/service';
 
@@ -13,6 +14,7 @@ function Root({services}) {
     <ServiceProvider value={services}>
       <div className={styles['root']}>
         <Viewport />
+        <WidgetOutlet />
       </div>
     </ServiceProvider>
   );
