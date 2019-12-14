@@ -11,7 +11,7 @@ function Viewport() {
 
   const services = useServices();
 
-  React.useEffect(connectRenderer, []);
+  React.useEffect(connectRenderer, [services]);
 
   return (
     <div className={styles['viewport']}>
